@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.Search {
+  .content {
+    input {
+      width: 100%;
+      height: 50px;
+      border: none;
+      outline: none;
+      color: black;
+      border-bottom: 1px solid black;
+      padding-left: 20px;
+      font-family: 'Inter', sans-serif;
+      font-size: 50px;
+      font-weight: 200;
+      padding-bottom: 10px;
+      &::placeholder {
+        color: black;
+      }
+    }
+  }
+}

@@ -1,0 +1,1472 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+.HomeCatalog {
+  .window {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.83);
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+  }
+  .content {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    position: relative;
+    .catalog {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: 16;
+      padding: 0px;
+      width: 200px;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        top: -20px;
+        right: 0;
+        height: 105%;
+        width: 0.5px;
+        background-color: #000;
+      }
+      .catalogText {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 14px;
+        width: 100%;
+        color: rgb(0, 0, 0);
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.4%;
+        text-align: center;
+      }
+    }
+    .catalogTwo {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      gap: 16;
+      width: 250px;
+      height: 390px;
+      position: relative;
+      z-index: 11;
+      .catalogText {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-right: 14px;
+        width: 100%;
+        color: rgb(0, 0, 0);
+        font-family: 'Poppins', sans-serif;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.4%;
+        text-align: center;
+      }
+    }
+
+    .poster {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      width: 80%;
+      height: 360px;
+      background: rgb(0, 0, 0);
+      overflow: hidden;
+      .image {
+        overflow: hidden;
+        .nextImage {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 400px;
+          height: 390px;
+          object-fit: cover;
+        }
+      }
+      .productDescription {
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        flex-direction: column;
+        margin-left: 80px;
+        margin-top: 50px;
+        gap: 20px;
+        .btn {
+          display: flex;
+          align-items: center;
+
+          margin-top: 20px;
+          button {
+            color: rgb(250, 250, 250);
+            font-family: 'Poppins' sans-serif;
+            font-size: 26px;
+            font-weight: 300;
+            line-height: 24px;
+            letter-spacing: 2%;
+            text-align: start;
+            border: none;
+            background: transparent;
+            border-bottom: 1.5px solid rgb(250, 250, 250);
+            padding-bottom: 8px;
+          }
+          .icons {
+            font-size: 30px;
+            color: rgb(250, 250, 250);
+            cursor: pointer;
+          }
+        }
+        .discount {
+          color: rgb(250, 250, 250);
+          font-family: 'Inter', sans-serif;
+          font-size: 48px;
+          font-weight: 600;
+          line-height: 60px;
+          letter-spacing: 4px;
+          text-align: left;
+        }
+        .productName {
+          display: flex;
+          align-items: center;
+          gap: 25px;
+          .apple {
+            width: 60px;
+            height: 60px;
+            color: white;
+          }
+          .text {
+            color: rgb(250, 250, 250);
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .catalog {
+        display: none;
+      }
+      .catalogTwo {
+        position: absolute;
+        top: -10px;
+        left: 0;
+        background: white;
+      }
+
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .catalog {
+        display: flex;
+      }
+      .window {
+        display: none;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 75%;
+        height: 343px;
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: start;
+          flex-direction: column;
+          margin-left: 70px;
+          margin-top: 30px;
+          gap: 20px;
+          .btn {
+            margin-top: 15px;
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: 24px;
+              font-weight: 300;
+              line-height: 20px;
+              letter-spacing: 1.5%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+              padding-bottom: 8px;
+            }
+            .icons {
+              font-size: 30px;
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: 40px;
+            font-weight: 500;
+            letter-spacing: 2%;
+            line-height: 60px;
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .apple {
+              width: 55px;
+              height: 55px;
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 20px;
+              text-align: center;
+            }
+          }
+        }
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 350px;
+            height: 390px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    @media (max-width: 1000px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .catalog {
+        display: none;
+      }
+      .window {
+        display: none;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: 343px;
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: start;
+          flex-direction: column;
+          margin-left: 70px;
+          margin-top: 30px;
+          gap: 20px;
+          .btn {
+            margin-top: 15px;
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: 24px;
+              font-weight: 300;
+              line-height: 20px;
+              letter-spacing: 1.5%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+              padding-bottom: 8px;
+            }
+            .icons {
+              font-size: 30px;
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(35px, 5vw, 45px);
+            font-weight: 500;
+            letter-spacing: 2%;
+            line-height: 60px;
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .apple {
+              width: 55px;
+              height: 55px;
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 20px;
+              text-align: center;
+            }
+          }
+        }
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 350px;
+            height: 390px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+    @media (min-width: 1025px) {
+      .catalog {
+        display: flex;
+      }
+      .window {
+        display: none;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 78%;
+        height: 343px;
+      }
+    }
+    @media (min-width: 1300px) {
+      .catalog {
+        display: flex;
+      }
+      .window {
+        display: none;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 80%;
+        height: 343px;
+      }
+    }
+    @media (max-width: 800px) {
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: 360px;
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 350px;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(50px, 5vw, 80px);
+          margin-top: clamp(20px, 5vw, 30px);
+          gap: clamp(10px, 5vw, 20px);
+          .btn {
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: 26px;
+              font-weight: 300;
+              line-height: 24px;
+              letter-spacing: 2%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: clamp(20px, 5vw, 30px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(35px, 6vw, 48px);
+            font-weight: 600;
+            line-height: 70px;
+            letter-spacing: 4px;
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 5vw, 20px);
+            .apple {
+              width: clamp(40px, 5vw, 60px);
+              height: clamp(40px, 5vw, 60px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(12px, 5vw, 15px);
+              font-weight: 400;
+              letter-spacing: 0%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 750px) {
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: 360px;
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(320px, 4vw, 350px);
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(50px, 4vw, 70px);
+          margin-top: clamp(20px, 2vw, 30px);
+          gap: clamp(15px, 3vw, 20px);
+          .btn {
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(20px, 5vw, 25px);
+              font-weight: 300;
+              line-height: 24px;
+              letter-spacing: 2%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: 30px;
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(39px, 3vw, 48px);
+            font-weight: 600;
+            line-height: 60px;
+            letter-spacing: clamp(3px, 3vw, 4px);
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clmp(22px, 4vw, 25px);
+            .apple {
+              width: clamp(40px, 4vw, 60px);
+              height: clamp(40px, 4w, 60px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(10px, 5vw, 15px);
+              font-weight: 400;
+              line-height: 60px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 700px) {
+      .content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: clamp(340px, 5vw, 360px);
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(300px, 5vw, 310px);
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: 40px;
+          margin-top: 30px;
+          gap: 10px;
+          .btn {
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(16px, 5vw, 23px);
+              font-weight: 200;
+              line-height: 24px;
+              letter-spacing: 2%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: clamp(20px, 4vw, 25px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+            display: flex;
+            align-items: center;
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(38px, 5vw, 40px);
+            font-weight: 600;
+            line-height: 60px;
+            letter-spacing: 4%;
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 5vw, 15px);
+            .apple {
+              width: clamp(20px, 5vw, 40px);
+              height: clamp(20px, 5vw, 40px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(7px, 5vw, 15px);
+              font-weight: 400;
+              letter-spacing: 0%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 680px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: clamp(320px, 5vw, 360px);
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(300px, 5vw, 320px);
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(30px, 5vw, 40px);
+          margin-top: clamp(20px, 4vw, 30px);
+          gap: 10px;
+          .btn {
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(15px, 4vw, 17px);
+              font-weight: 200;
+              line-height: 24px;
+              letter-spacing: 2%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: clamp(20px, 5vw, 25px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+            display: flex;
+            align-items: center;
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(35px, 5vw, 40px);
+            font-weight: 600;
+            line-height: 60px;
+            letter-spacing: 4%;
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clamp(15px, 5vw, 23px);
+            .apple {
+              width: clamp(30px, 5vw, 50px);
+              height: clamp(30px, 5vw, 50px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(10px, 5vw, 13px);
+              font-weight: 400;
+              line-height: 44px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 650px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: clamp(340px, 5vw, 360px);
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(290px, 4vw, 300px);
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(40px, 4vw, 60px);
+          margin-top: clamp(20px, 2vw, 30px);
+          gap: clamp(15px, 3vw, 20px);
+          .btn {
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(15px, 4vw, 18px);
+              font-weight: 300;
+              line-height: clamp(16px, 4vw, 24px);
+              letter-spacing: 2%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+              padding-bottom: 8px;
+            }
+            .icons {
+              font-size: clamp(20px, 4vw, 25px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+            display: flex;
+            align-items: center;
+            gap: 20px;
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(32px, 3vw, 40px);
+            font-weight: 600;
+            line-height: clamp(50px, 4vw, 60px);
+            letter-spacing: clamp(3px, 3vw, 4px);
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clmp(15px, 4vw, 20px);
+            .apple {
+              width: clamp(30px, 4vw, 40px);
+              height: clamp(30px, 4w, 40px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(10px, 4vw, 13px);
+              font-weight: 400;
+              line-height: 24px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 600px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: clamp(260px, 10vw, 316px);
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(240px, 4vw, 300px);
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(30px, 4vw, 40px);
+          margin-top: clamp(15px, 4vw, 20px);
+          gap: clamp(5px, 3vw, 5px);
+          .btn {
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(15px, 4vw, 20px);
+              font-weight: 200;
+              line-height: 24px;
+              letter-spacing: 2%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: clamp(25px, 4vw, 30px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 4wv, 10px);
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(30px, 3vw, 35px);
+            font-weight: 600;
+            line-height: 60px;
+            letter-spacing: 4%;
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 4vw, 10px);
+            .apple {
+              width: clamp(30px, 4vw, 35px);
+              height: clamp(30px, 4vw, 35px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(12px, 3vw, 12px);
+              font-weight: 400;
+              line-height: 20px;
+              letter-spacing: 0%;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 550px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .catalogTwo {
+        width: 100%;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: clamp(230px, 5vw, 250px);
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(220px, 4vw, 220px);
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(20px, 4vw, 40px);
+          margin-top: clamp(20px, 2vw, 20px);
+          gap: clamp(10px, 3vw, 10px);
+          .btn {
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(15px, 4vw, 15px);
+              font-weight: 300;
+              line-height: clamp(16px, 4vw, 24px);
+              letter-spacing: 2%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: clamp(15px, 4vw, 20px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 4vw, 15px);
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(27px, 3vw, 30px);
+            font-weight: 600;
+            line-height: clamp(50px, 4vw, 60px);
+            letter-spacing: clamp(3px, 3vw, 4px);
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 4vw, 14px);
+            .apple {
+              width: clamp(25px, 4vw, 35px);
+              height: clamp(25px, 4vw, 35px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(10px, 5vw, 12px);
+              font-weight: 400;
+              line-height: 24px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 500px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .catalogTwo {
+        width: 100%;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: clamp(230px, 5vw, 250px);
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(200px, 4vw, 220px);
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(20px, 4vw, 40px);
+          margin-top: clamp(20px, 2vw, 20px);
+          gap: clamp(10px, 3vw, 10px);
+          .btn {
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(13px, 4vw, 14px);
+              font-weight: 300;
+              line-height: clamp(16px, 4vw, 24px);
+              letter-spacing: 2%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: clamp(15px, 4vw, 20px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 4vw, 15px);
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(25px, 3vw, 30px);
+            font-weight: 600;
+            line-height: clamp(50px, 4vw, 60px);
+            letter-spacing: clamp(3px, 3vw, 4px);
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 4vw, 14px);
+            .apple {
+              width: clamp(25px, 4vw, 35px);
+              height: clamp(25px, 4vw, 35px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(10px, 5vw, 12px);
+              font-weight: 400;
+              line-height: 24px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 450px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .catalogTwo {
+        width: 100%;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: clamp(210px, 5vw, 250px);
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(180px, 4vw, 220px);
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(20px, 4vw, 40px);
+          margin-top: clamp(10px, 2vw, 20px);
+          gap: clamp(5px, 3vw, 5px);
+          .btn {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 4vw, 15px);
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(10px, 4vw, 13px);
+              font-weight: 300;
+              letter-spacing: 2%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: clamp(15px, 4vw, 20px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(20px, 3vw, 20px);
+            font-weight: 600;
+            line-height: clamp(50px, 4vw, 60px);
+            letter-spacing: clamp(3px, 3vw, 4px);
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clamp(6px, 4vw, 14px);
+            .apple {
+              width: clamp(20px, 4vw, 35px);
+              height: clamp(20px, 4vw, 35px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(5px, 5vw, 10px);
+              font-weight: 400;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 400px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .catalogTwo {
+        width: 100%;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: clamp(190px, 5vw, 250px);
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(165px, 4vw, 220px);
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(20px, 4vw, 40px);
+
+          .btn {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 4vw, 15px);
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(10px, 4vw, 13px);
+              font-weight: 300;
+              letter-spacing: 2%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: clamp(15px, 4vw, 20px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(20px, 3vw, 20px);
+            font-weight: 600;
+            line-height: clamp(50px, 4vw, 60px);
+            letter-spacing: clamp(3px, 3vw, 4px);
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clamp(6px, 4vw, 14px);
+            .apple {
+              width: clamp(20px, 4vw, 35px);
+              height: clamp(20px, 4vw, 35px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(5px, 5vw, 8px);
+              font-weight: 400;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 380px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .catalogTwo {
+        width: 100%;
+      }
+      .poster {
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(140px, 4vw, 150px);
+            height: clamp(190px, 5vw, 200px);
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(20px, 4vw, 40px);
+
+          .btn {
+            display: flex;
+            align-items: center;
+            gap: clamp(10px, 4vw, 15px);
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(10px, 4vw, 13px);
+              font-weight: 300;
+              letter-spacing: 2%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: clamp(15px, 4vw, 20px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(20px, 3vw, 20px);
+            font-weight: 600;
+            line-height: clamp(50px, 4vw, 60px);
+            letter-spacing: clamp(3px, 3vw, 4px);
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clamp(6px, 4vw, 14px);
+            .apple {
+              width: clamp(20px, 4vw, 35px);
+              height: clamp(20px, 4vw, 35px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(5px, 5vw, 8px);
+              font-weight: 400;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 350px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .catalogTwo {
+        width: 100%;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: clamp(170px, 5vw, 250px);
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(130px, 4vw, 150px);
+            height: clamp(170px, 5vw, 200px);
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(20px, 4vw, 40px);
+          .btn {
+            display: flex;
+            align-items: center;
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(5px, 4vw, 10px);
+              font-weight: 300;
+              letter-spacing: 1%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: clamp(15px, 4vw, 20px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(15px, 3vw, 15px);
+            font-weight: 600;
+            line-height: clamp(30px, 4vw, 60px);
+            letter-spacing: clamp(3px, 3vw, 4px);
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clamp(6px, 4vw, 14px);
+            .apple {
+              width: clamp(10px, 4vw, 20px);
+              height: clamp(10px, 4vw, 20px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(4px, 5vw, 8px);
+              font-weight: 400;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 320px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .catalogTwo {
+        width: 100%;
+      }
+      .poster {
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        width: 100%;
+        height: clamp(160px, 5vw, 250px);
+        background: rgb(0, 0, 0);
+        overflow: hidden;
+        .image {
+          overflow: hidden;
+          .nextImage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(110px, 4vw, 150px);
+            height: clamp(170px, 5vw, 200px);
+            object-fit: cover;
+          }
+        }
+        .productDescription {
+          display: flex;
+          align-items: start;
+          justify-content: center;
+          flex-direction: column;
+          margin-left: clamp(20px, 4vw, 40px);
+          .btn {
+            display: flex;
+            align-items: center;
+            button {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins' sans-serif;
+              font-size: clamp(5px, 4vw, 10px);
+              font-weight: 300;
+              letter-spacing: 1%;
+              text-align: start;
+              border: none;
+              background: transparent;
+              border-bottom: 1.5px solid rgb(250, 250, 250);
+            }
+            .icons {
+              font-size: clamp(15px, 4vw, 20px);
+              color: rgb(250, 250, 250);
+              cursor: pointer;
+            }
+          }
+          .discount {
+            color: rgb(250, 250, 250);
+            font-family: 'Inter', sans-serif;
+            font-size: clamp(15px, 3vw, 15px);
+            font-weight: 600;
+            line-height: clamp(30px, 4vw, 60px);
+            letter-spacing: clamp(3px, 3vw, 4px);
+            text-align: left;
+          }
+          .productName {
+            display: flex;
+            align-items: center;
+            gap: clamp(6px, 4vw, 14px);
+            .apple {
+              width: clamp(10px, 4vw, 20px);
+              height: clamp(10px, 4vw, 20px);
+              color: white;
+            }
+            .text {
+              color: rgb(250, 250, 250);
+              font-family: 'Poppins', sans-serif;
+              font-size: clamp(4px, 5vw, 8px);
+              font-weight: 400;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+}

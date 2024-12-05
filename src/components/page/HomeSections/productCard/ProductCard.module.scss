@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.ProductCard {
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modalContent {
+  background: transparent; /* Прозрачный фон для контейнера изображения */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.enlargedImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  border-radius: 0; /* Убираем закругления */
+  box-shadow: none; /* Убираем тень */
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+
+
+
+  .content {
+    .View {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      color: #fafafa;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      width: 234px;
+      height: 56px;
+      gap: 10px;  
+      background: #db4444;
+      border: none;
+      border-radius: 4px;
+    }
+    .overflowBtn {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      gap: 20px;
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        background: #f5f5f5;
+        border: none;
+        margin-bottom: 20px;
+      }
+    }
+    .overflow {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      position: relative;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 1rem;
+      gap: 15px;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .allCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: relative;
+        width: 270px;
+        height: 350px;
+        .card {
+          .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgb(255, 255, 255);
+            border-radius: 0px 0px 4px 4px;
+            width: 270px;
+            height: 41px;
+            background: rgb(0, 0, 0);
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0%;
+            text-align: left;
+            opacity: 0;
+            &:hover {
+              opacity: 1;
+            }
+          }
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          position: relative;
+          border-radius: 4px;
+          background: rgb(245, 245, 245);
+          width: 270px;
+          height: 250px;
+          gap: 10px;
+          .icons {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: absolute;
+            gap: 5px;
+            top: 10px;
+            right: 10px;
+            .eyse {
+              cursor: pointer;
+              color: black;
+              height: 30px;
+              width: 30px;
+              border-radius: 50%;
+              background: white;
+              top: 10px;
+              right: 10px;
+            }
+            .heart {
+              cursor: pointer;
+              color: black;
+              height: 30px;
+              width: 30px;
+              border-radius: 50%;
+              background: white;
+              top: 10px;
+              right: 10px;
+            }
+          }
+          .Images {
+            width: 190px;
+            height: 200px;
+            object-fit: contain;
+            mix-blend-mode: darken;
+          }
+        }
+
+        .text {
+          color: rgb(0, 0, 0);
+          font-family: 'Poppins', sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+        .price {
+          color: rgb(219, 68, 68);
+          font-family: 'Poppins', sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: 0%;
+          text-align: left;
+        }
+        .star {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 4px;
+          .opacityText {
+            opacity: 0.25;
+          }
+          .countText {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            font-size: 10px;
+            line-height: 21px;
+            opacity: 0.5;
+          }
+          .starText {
+            border-radius: 1.4px;
+            color: rgb(255, 173, 51);
+          }
+        }
+      }
+    }
+  }
+}

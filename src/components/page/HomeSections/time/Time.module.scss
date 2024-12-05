@@ -1,0 +1,434 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+.Time {
+  .content {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    .flex {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 16px;
+    }
+    .textToday {
+      color: rgb(219, 68, 68);
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 20px;
+      letter-spacing: 0%;
+      text-align: left;
+    }
+    .allTime {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+      gap: 90px;
+      .flash {
+        color: rgb(0, 0, 0);
+        font-family: 'Inter', sans-serif;
+        font-size: 30px;
+        font-weight: 600;
+        line-height: 48px;
+        letter-spacing: 4%;
+        text-align: left;
+        margin-top: 15px;
+      }
+      .time {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 302px;
+        height: 50px;
+        .span {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin-top: 13px;
+          gap: 8;
+          span {
+            height: 4px;
+            width: 4px;
+            background: rgb(224, 117, 117);
+            border-radius: 50%;
+          }
+        }
+        .day {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .text {
+            color: rgb(0, 0, 0);
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+        }
+        .hours {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .text {
+            color: rgb(0, 0, 0);
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+        }
+        .minutes {
+          .text {
+            color: rgb(0, 0, 0);
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+        }
+
+        .seconds {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .text {
+            color: rgb(0, 0, 0);
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0%;
+            text-align: left;
+          }
+        }
+        .currentTime {
+          font-family: 'Inter', sans-serif;
+          font-weight: 700;
+          font-size: 32px;
+          letter-spacing: 4%;
+        }
+      }
+    }
+    .today {
+      width: 20px;
+      height: 40px;
+      border-radius: 4px;
+      background: rgb(219, 68, 68);
+    }
+    @media (max-width: 600px) {
+      .allTime {
+        .flash {
+          font-size: clamp(25px, 3vw, 30px);
+        }
+      }
+      .textToday {
+        font-size: clamp(10px, 2vw, 14px);
+      }
+      .today {
+        width: clamp(13px, 3vw, 16px);
+        height: clamp(20px, 3vw, 32px);
+      }
+      .allTime {
+        .time {
+          .day {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(7px, 3vw, 9px);
+            }
+          }
+          .hours {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(7px, 3vw, 9px);
+            }
+          }
+          .minutes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .text {
+              font-size: clamp(7px, 3vw, 9px);
+            }
+          }
+          .seconds {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(7px, 3vw, 9px);
+            }
+          }
+          .currentTime {
+            font-size: clamp(10px, 3vw, 28px);
+          }
+        }
+      }
+    }
+    @media (max-width: 568px) {
+      .allTime {
+        .flash {
+          font-size: clamp(20px, 3vw, 24px);
+        }
+        .time {
+          width: clamp(250px, 3vw, 280px);
+          height: clamp(27px, 2vw, 40px);
+          .span {
+            margin-top: clamp(10px, 3vw, 20px);
+          }
+        }
+      }
+    }
+    @media (max-width: 490px) {
+      .allTime {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: clamp(65px, 4vw, 80px);
+        .flash {
+          font-size: clamp(20px, 3vw, 24px);
+        }
+        .time {
+          width: clamp(220px, 3vw, 250px);
+          height: clamp(22px, 2vw, 30px);
+          .day {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .hours {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .minutes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .seconds {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .currentTime {
+            font-size: clamp(9px, 3vw, 12px);
+          }
+          .span {
+            gap: clamp(3px, 3vw, 6px);
+            margin-top: clamp(10px, 3vw, 20px);
+          }
+        }
+      }
+    }
+    @media (max-width: 430px) {
+      .allTime {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: clamp(50px, 4vw, 70px);
+        .flash {
+          font-size: clamp(20px, 3vw, 24px);
+        }
+        .time {
+          margin-top: 10px;
+          width: clamp(190px, 3vw, 210px);
+          height: clamp(20px, 2vw, 25px);
+          .day {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .hours {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .minutes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .seconds {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .currentTime {
+            font-size: clamp(9px, 3vw, 10px);
+          }
+          .span {
+            gap: clamp(3px, 3vw, 6px);
+            margin-top: clamp(10px, 3vw, 20px);
+            span {
+              height: clamp(2px, 2vw, 2px);
+              width: clamp(2px, 2vw, 2px);
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 390px) {
+      .allTime {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: clamp(40px, 4vw, 60px);
+        .flash {
+          font-size: clamp(15px, 3vw, 17px);
+        }
+        .time {
+          margin-top: 10px;
+          width: clamp(190px, 3vw, 220px);
+          height: clamp(20px, 2vw, 25px);
+          .day {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .hours {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .minutes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .seconds {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .currentTime {
+            font-size: clamp(9px, 3vw, 10px);
+          }
+          .span {
+            gap: clamp(3px, 3vw, 6px);
+            margin-top: clamp(10px, 3vw, 20px);
+            span {
+              height: clamp(2px, 2vw, 2px);
+              width: clamp(2px, 2vw, 2px);
+            }
+          }
+        }
+      }
+    }
+      @media (max-width: 352px) {
+      .allTime {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: clamp(25px, 4vw, 40px);
+        .flash {
+          font-size: clamp(15px, 3vw, 17px);
+        }
+        .time {
+          margin-top: 10px;
+          width: clamp(170px, 3vw, 220px);
+          height: clamp(20px, 2vw, 25px);
+          .day {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .hours {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .minutes {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .seconds {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .text {
+              font-size: clamp(5px, 3vw, 7px);
+            }
+          }
+          .currentTime {
+            font-size: clamp(9px, 3vw, 10px);
+          }
+          .span {
+            gap: clamp(3px, 3vw, 6px);
+            margin-top: clamp(10px, 3vw, 20px);
+            span {
+              height: clamp(2px, 2vw, 2px);
+              width: clamp(2px, 2vw, 2px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

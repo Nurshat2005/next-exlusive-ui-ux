@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+.Header {
+  width: 100%;
+  border-bottom: 0.5px solid black;
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(15px, 3vw, 30px);
+    .menu {
+      color: black;
+      font-size: 30px;
+      cursor: pointer;
+      display: none;
+    }
+    .logo {
+      color: rgb(0, 0, 0);
+      font-size: clamp(16px, 2vw, 24px);
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 3%;
+      text-align: left;
+      font-family: 'Inter', sans-serif;
+    }
+    .allLink {
+      display: inline-flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(15px, 3vw, 30px);
+
+      .link {
+        position: relative;
+        color: rgb(0, 0, 0);
+        font-family: 'Poppins', sans-serif;
+        font-size: clamp(8px, 1.5vw, 16px);
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: #282a4a;
+          transition: width 0.4s ease;
+        }
+
+        &:hover {
+          color: #00adff;
+        }
+      }
+
+      .active {
+        color: #310d14;
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: clamp(15px, 3vw, 30px);
+
+      .heart {
+        font-size: clamp(15px, 2vw, 22px);
+      }
+      .shop {
+        font-size: clamp(15px, 2vw, 22px);
+      }
+      .user {
+        font-size: clamp(15px, 2vw, 22px);
+      }
+      .inputSearch {
+        position: relative;
+        .search {
+          position: absolute;
+          font-size: clamp(13px, 3vw, 22px);
+          top: clamp(5px, 2vw, 12px);
+          right: clamp(2px, 3vw, 20px);
+        }
+        .searchIcon {
+          display: none;
+          cursor: pointer;
+          font-size: clamp(15px, 2vw, 22px);
+        }
+        input {
+          height: clamp(30px, 5vh, 50px);
+          width: clamp(150px, 30vw, 300px);
+          font-size: clamp(12px, 1.5vw, 16px);
+          border-radius: 4px;
+          padding: clamp(5px, 1vh, 10px) clamp(10px, 2vw, 15px);
+          background: rgb(245, 245, 245);
+          outline: none;
+          border: none;
+          padding-left: clamp(10px, 1vw, 15px);
+          &::placeholder {
+            font-family: 'Poppins', sans-serif;
+            font-size: clamp(12px, 1.2vw, 14px);
+            color: rgba(0, 0, 0, 0.5);
+          }
+        }
+      }
+    }
+
+    @media (max-width: 1023px) {
+      .icons {
+        .inputSearch {
+          .search {
+            display: none;
+          }
+          .searchIcon {
+            font-size: clamp(15px, 4vw, 20px);
+            display: flex;
+          }
+          input {
+            display: none;
+          }
+        }
+        .heart {
+          font-size: clamp(15px, 4vw, 20px);
+          cursor: pointer;
+        }
+        .shop {
+          font-size: clamp(15px, 4vw, 20px);
+          cursor: pointer;
+        }
+        .user {
+          font-size: clamp(15px, 4vw, 20px);
+          cursor: pointer;
+        }
+      }
+
+      .logo {
+        display: none;
+      }
+      .menu {
+        display: flex;
+      }
+    }
+    @media (max-width: 690px) {
+      .icons {
+        .inputSearch {
+          .searchIcon {
+            font-size: clamp(17px, 2vw, 22px);
+          }
+        }
+      }
+      .allLink {
+        gap: clamp(15px, 3vw, 10px);
+        .link {
+          font-size: clamp(16px, 4vw, 19px);
+        }
+      }
+    }
+    @media (max-width: 640px) {
+      .icons {
+        .inputSearch {
+          .searchIcon {
+            font-size: clamp(16px, 2vw, 22px);
+          }
+        }
+      }
+      .allLink {
+        gap: clamp(15px, 3vw, 20px);
+        .link {
+          font-size: clamp(15px, 3vw, 20px);
+        }
+      }
+    }
+    @media (max-width: 600px) {
+      .icons {
+        .inputSearch {
+          .searchIcon {
+            font-size: clamp(20px, 2vw, 20px);
+          }
+        }
+      }
+      .allLink {
+        gap: clamp(10px, 3vw, 15px);
+        .link {
+          font-size: clamp(15px, 2vw, 20px);
+        }
+      }
+    }
+    @media (max-width: 580px) {
+      .icons {
+        .inputSearch {
+          .searchIcon {
+            font-size: clamp(20px, 2vw, 20px);
+          }
+        }
+      }
+      .allLink {
+        gap: clamp(10px, 3vw, 15px);
+        .link {
+          font-size: clamp(15px, 2vw, 20px);
+        }
+      }
+      .logo {
+        font-size: clamp(10px, 2vw, 20px);
+      }
+    }
+    @media (max-width: 500px) {
+      .icons {
+        gap: clamp(16px, 3vw, 20px);
+        .heart {
+          font-size: clamp(16px, 2vw, 20px);
+        }
+        .user {
+          font-size: clamp(16px, 2vw, 20px);
+        }
+        .shop {
+          font-size: clamp(16px, 2vw, 20px);
+        }
+        .inputSearch {
+          .searchIcon {
+            font-size: clamp(16px, 2vw, 20px);
+          }
+        }
+      }
+      .allLink {
+        gap: clamp(9px, 3vw, 15px);
+        .link {
+          font-size: clamp(13px, 2vw, 15px);
+        }
+      }
+      .logo {
+        font-size: clamp(10px, 2vw, 20px);
+      }
+    }
+    @media (max-width: 440px) {
+      .icons {
+        gap: clamp(10px, 3vw, 10px);
+        .inputSearch {
+          .search {
+            font-size: clamp(9px, 2vw, 13px);
+            right: clamp(1px, 3vw, -10px);
+            bottom: clamp(0px, 2vw, 7px);
+          }
+        }
+      }
+      .allLink {
+        gap: clamp(6px, 3vw, 8px);
+        .link {
+          font-size: clamp(10px, 2vw, 16px);
+        }
+      }
+      .logo {
+        font-size: clamp(10px, 2vw, 20px);
+      }
+    }
+    @media (max-width: 400px) {
+      .icons {
+        gap: clamp(10px, 3vw, 10px);
+        .heart {
+          font-size: clamp(17px, 2vw, 20px);
+        }
+        .user {
+          font-size: clamp(17px, 2vw, 20px);
+        }
+        .shop {
+          font-size: clamp(17px, 2vw, 20px);
+        }
+        .inputSearch {
+          .searchIcon {
+            font-size: clamp(17px, 2vw, 20px);
+          }
+        }
+      }
+      .allLink {
+        gap: clamp(6px, 3vw, 8px);
+        .link {
+          font-size: clamp(10px, 2vw, 16px);
+        }
+      }
+      .logo {
+        font-size: clamp(10px, 2vw, 10px);
+      }
+    }
+    @media (max-width: 370px) {
+      .menu {
+        font-size: clamp(14px, 2vw, 20px);
+      }
+      .icons {
+        gap: clamp(9px, 3vw, 10px);
+        .heart {
+          font-size: clamp(12px, 2vw, 16px);
+        }
+        .user {
+          font-size: clamp(12px, 2vw, 16px);
+        }
+        .shop {
+          font-size: clamp(12px, 2vw, 16px);
+        }
+        .inputSearch {
+          .searchIcon {
+            font-size: clamp(12px, 2vw, 16px);
+          }
+        }
+      }
+      .allLink {
+        gap: clamp(5px, 3vw, 8px);
+        .link {
+          font-size: clamp(9px, 2vw, 15px);
+        }
+      }
+    }
+    @media (max-width: 320px) {
+      width: 100%;
+      .icons {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: clamp(9px, 3vw, 10px);
+        .heart {
+          font-size: clamp(13px, 2vw, 15px);
+        }
+        .user {
+          font-size: clamp(13px, 2vw, 15px);
+        }
+        .shop {
+          font-size: clamp(13px, 2vw, 15px);
+        }
+        .inputSearch {
+          .searchIcon {
+            font-size: clamp(13px, 2vw, 15px);
+          }
+        }
+      }
+      .allLink {
+        gap: clamp(6px, 3vw, 8px);
+        .link {
+          font-size: clamp(9px, 3vw, 9px);
+        }
+      }
+      .menu {
+        font-size: clamp(15px, 2vw, 20px);
+      }
+    }
+  }
+}

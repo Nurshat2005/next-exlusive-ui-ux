@@ -1,0 +1,30 @@
+html {
+  color-scheme: white;
+}
+body {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 20px;
+  overflow-x: hidden;
+}
+.containers {
+  width: 100%;
+  max-width: 1280px;
+  padding: 20px 0;
+}
+button {
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+}
